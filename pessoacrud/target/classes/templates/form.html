@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Nova Pessoa</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <h1>Nova Pessoa</h1>
+    <form th:action="@{/salvar}" method="post">
+        Nome: <input type="text" name="nome" /><br/>
+        Idade: <input type="number" name="idade" /><br/>
+        Cargo: <input type="text" name="cargo" /><br/>
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="/">Voltar</a>
+</body>
+</html>

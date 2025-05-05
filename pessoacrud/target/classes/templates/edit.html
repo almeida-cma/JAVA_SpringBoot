@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Editar Pessoa</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <h1>Editar Pessoa</h1>
+    <form th:action="@{/atualizar/{id}(id=${pessoa.id})}" method="post">
+        Nome: <input type="text" name="nome" th:value="${pessoa.nome}" /><br/>
+        Idade: <input type="number" name="idade" th:value="${pessoa.idade}" /><br/>
+        Cargo: <input type="text" name="cargo" th:value="${pessoa.cargo}" /><br/>
+        <button type="submit">Atualizar</button>
+    </form>
+    <a href="/">Voltar</a>
+</body>
+</html>
